@@ -1,5 +1,3 @@
-import React from "react";
-
 interface PortfolioItem {
   id: string;
   name: string;
@@ -9,28 +7,33 @@ export default async function Home() {
   let data: PortfolioItem[] = [];
 
   try {
-    // FIXED: Using a safe server-side environment variable (no NEXT_PUBLIC_ prefix)
     const apiKey = process.env.API_SECRET_KEY;
     
     if (apiKey) {
-      const res = await fetch(`https://api.example.com/data?key=${apiKey}`);
+      // FIXED: Sending API key as a header instead of URL parameter
+      const res = await fetch("https://api.example.com/data", {
+        headers: {
+          "Authorization": `Bearer ${apiKey}`
+        }
+      });
       
-      // FIXED: Checking res.ok before parsing JSON
       if (res.ok) {
         const json = await res.json();
         
-        // FIXED: Runtime array validation before assignment
         if (Array.isArray(json)) {
           data = json;
         } else {
-          console.error("Invalid API response format");
+          // FIXED: Adding 'ALERT:' prefix as per team rules
+          console.error("ALERT: Invalid API response format");
         }
       } else {
-        console.error(`API Error: ${res.status}`);
+        // FIXED: Adding 'ALERT:' prefix
+        console.error(`ALERT: API Error: ${res.status}`);
       }
     }
   } catch (error) {
-    console.error("Failed to fetch portfolio data", error);
+    // FIXED: Adding 'ALERT:' prefix
+    console.error("ALERT: Failed to fetch portfolio data", error);
   }
 
   return (
