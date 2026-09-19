@@ -54,7 +54,7 @@ export function Hero() {
           </div>
         </div>
         <div className="flex justify-center lg:justify-end relative items-center w-full max-w-md aspect-square">
-          <div className="relative w-full max-w-[420px] transition-transform hover:scale-105 duration-300 flex items-center justify-center">
+          <div className="relative w-full max-w-[420px] flex items-center justify-center">
             <Image src="/avatars/hero.png" alt={PORTFOLIO.name} width={420} height={420} className="w-full max-w-[420px] h-auto object-contain block select-none pointer-events-none" priority />
           </div>
         </div>
