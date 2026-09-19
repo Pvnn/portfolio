@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center">
           <span className="font-display font-bold text-xl tracking-tight text-white dark:text-black">
-            {PORTFOLIO.name.split(' ')[0]}
+            pvn
           </span>
         </div>
         <div className="flex items-center gap-6">

@@ -8,9 +8,8 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-sans' 
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-display' })
 
 export const metadata: Metadata = {
-  title: 'Pavan | ML Researcher & Software Engineer',
-  description: 'Portfolio of Pavan, a ML Researcher and Software Engineer.',
-  generator: 'v0.app',
+  title: 'Pavan Raj | ML Researcher & Software Engineer',
+  description: 'Portfolio of Pavan Raj, a Machine Learning Researcher and Software Engineer specializing in intelligent systems and robust architectures.',
   icons: {
     icon: [
       {
@@ -31,11 +30,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  themeColor: 'white',
 }
 
 export default function RootLayout({
@@ -46,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className={`${jakarta.variable} ${outfit.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
           {children}
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}

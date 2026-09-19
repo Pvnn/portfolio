@@ -42,27 +42,37 @@ export const PORTFOLIO = {
   ],
   featuredProjects: [
     {
-      title: "GRASP — Graph-based Relevance Pruning",
-      description: "Query-aware, multi-stage context compression for RAG. Uses hybrid dense+sparse retrieval, Information-Bottleneck-style filtering, and graph-based clustering. Benchmarked on HotpotQA/NQ/TriviaQA.",
-      tags: "Python · PyTorch",
+      title: "GRASP: Graph-Based Relevance & Span Pruning",
+      description: "A multi-stage, query-aware context compression framework that intelligently prunes retrieved content before inference. Combines Information Bottleneck theory (QUITO-X) with graph-based evidence clustering (EP-EXIT) to preserve semantically cohesive evidence spans, simultaneously improving Exact Match scores by +10 and reducing LLM latency by 28% on QA benchmarks.",
+      tagline: "RAG Context Compression",
+      tags: "PyTorch · Gemma-2B · Flan-T5 · RRF Retrieval · Llama-3.1",
+      badge: "Paper Under Review",
+      report: "/grasp-paper",
+      reportLabel: "Read Paper ↗",
       github: "https://github.com/Pvnn/grasp-rag"
     },
     {
-      title: "Smart MCQ Solver",
-      description: "Retrieval-augmented MCQ pipeline fine-tuning microsoft/deberta-v3-small. Systematically evaluated against a custom from-scratch Transformer encoder and XGBoost baseline.",
-      tags: "Transformers · FAISS",
-      github: "https://github.com/Pvnn/mcq-solver"
+      title: "Transformer Attention Mechanics & Dense Retrieval for Scientific Reasoning",
+      description: "An empirical investigation into domain-specific scientific question answering. Features an L2-indexed dense retrieval pipeline over scientific corpora and benchmarks pre-trained disentangled attention (DeBERTa-v3) against a ground-up PyTorch transformer encoder to evaluate the inductive biases of self-attention versus pre-trained parameter scale.",
+      tagline: "Representation Learning & Attention Mechanics",
+      tags: "PyTorch · Transformer Encoders · Dense Embeddings · FAISS · Empirical NLP",
+      github: "https://github.com/Pvnn/transformer-reasoning-sciqa",
+      report: "https://drive.google.com/file/d/1h7Xu41uu0nIDbvdI-MYm5h-X3WVCdBFe/view?usp=drive_link"
     },
     {
-      title: "Code Review Agent",
-      description: "Autonomous agent fetching PR diffs, running an iterative Claude tool-use loop, and posting inline comments via GitHub API. Includes CI/CD mode and Netra tracing.",
-      tags: "TypeScript · Claude API",
+      title: "Autonomous Code Review Agent",
+      description: "An autonomous, real-time code review agent powered by Anthropic's Claude. It features an Express.js backend with automated CI/CD webhooks, a real-time NDJSON streaming dashboard via Server-Sent Events, and drops idempotent, inline comments directly onto the GitHub PR timeline. Fully instrumented with the Netra SDK for deep LLM tool tracing.",
+      tagline: "AI Agents & CI/CD Automation",
+      tags: "TypeScript · Express.js · Netra Observability · Server-Sent Events",
+      badge: "Anthropic & Netra SDK",
       github: "https://github.com/Pvnn/code-review-agent"
     },
     {
-      title: "Data Analyst Telegram Bot",
-      description: "Autonomous ReAct agent for data-analysis. Performs multi-layer fallback web search, downloads datasets, and runs sandboxed pandas to compute answers without hallucinations.",
-      tags: "Python · FastAPI",
+      title: "Autonomous Data Analyst Bot",
+      description: "A ReAct-based Telegram agent that answers complex data questions by navigating the real world. Features a resilient 4-layer search waterfall to locate public datasets, downloads raw files (CSV/Excel/PDF), and executes isolated Python code (pandas/numpy) to compute verifiable exact answers, outputting highly-structured JSON.",
+      tagline: "Autonomous Tool Calling & Execution",
+      tags: "Python · FastAPI · ReAct Framework · Pandas · Telegram API",
+      badge: "LLM Agent",
       github: "https://github.com/Pvnn/data-analyst-bot"
     }
   ]

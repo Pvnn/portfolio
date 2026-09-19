@@ -22,7 +22,7 @@ export function Navbar() {
         {/* Brand Logo */}
         <a href="#top" className="flex items-center group">
           <span className="font-display font-bold text-2xl tracking-tight text-black dark:text-white hover:text-neutral-700 transition-colors">
-            {PORTFOLIO.name.split(' ')[0]}
+            pvn
           </span>
         </a>
 
